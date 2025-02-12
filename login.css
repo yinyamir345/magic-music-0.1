@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: auto; /* Cambiado a auto para permitir flexibilidad en la altura */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #8e8282;
+  margin: auto;
+}
+
+img {
+  width: 200px;
+  height: auto; /* Cambiado a auto para mantener la proporción de la imagen */
+  border-radius: 50%; /* Cambiado a 50% para un borde redondeado perfecto */
+  margin-top: 30px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #2e4771;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

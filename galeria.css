@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Fuente sans-serif */
+}
+
+.cabezal {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Dividir en 3 partes: logo, navegador y slider */
+  height: 280px;
+  width: 1100px; /* Establecer ancho de 800px */
+  margin: 0 auto; /* Centrado */
+}
+.fondo {
+  background-image: url("img/musica3.jpg"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 250px; /* Ajusta la altura según sea necesario */
+  width: 70%; /* Ajusta el ancho según sea necesario */
+}
+.logo {
+  position: absolute;
+  width: 250px; /* Establecer ancho de 150px */
+  height: 250px; /* Establecer alto de 150px */
+  margin-left: 30px; /* Alineado a la izquierda */
+  margin-top: 20px;
+}
+.logotipo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.navegador {
+  width: 700px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 150px; /* Mover más cerca del logo */
+  margin-top: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(0, 40%, 66%, 0.486);
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.nav-list a:hover {
+  color: #2a768f; /* Azul muy claro */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de la navbar */
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.carrusel {
+  position: relative;
+  max-width: 600px; /* Ancho máximo del carrusel */
+  margin: auto; /* Centrar el carrusel */
+  overflow: hidden; /* Ocultar imágenes fuera del contenedor */
+  margin-top: 100px;
+}
+
+.carrusel-imagenes {
+  display: flex; /* Usar flexbox para alinear las imágenes en fila */
+  transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+}
+
+.carrusel-imagenes img {
+  max-width: 100%; /* Asegurarse de que las imágenes no excedan el ancho del contenedor */
+  display: none; /* Ocultar todas las imágenes por defecto */
+}
+
+.carrusel-imagenes img.activo {
+  display: block; /* Mostrar solo la imagen activa */
+}
+.carrusel img {
+  width: 800px;
+  height: 200px;
+}
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px; /* Posición del botón anterior */
+}
+
+.next {
+  right: 10px; /* Posición del botón siguiente */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Fuente sans-serif */
+}
+
+.cabezal {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Dividir en 3 partes: logo, navegador y slider */
+  height: 280px;
+  width: 1100px; /* Establecer ancho de 800px */
+  margin: 0 auto; /* Centrado */
+}
+.fondo {
+  background-image: url("img/musica3.jpg"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 250px; /* Ajusta la altura según sea necesario */
+  width: 70%; /* Ajusta el ancho según sea necesario */
+}
+.logo {
+  position: absolute;
+  width: 250px; /* Establecer ancho de 150px */
+  height: 250px; /* Establecer alto de 150px */
+  margin-left: 30px; /* Alineado a la izquierda */
+  margin-top: 20px;
+}
+.logotipo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.navegador {
+  width: 700px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 150px; /* Mover más cerca del logo */
+  margin-top: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(0, 40%, 66%, 0.486);
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.nav-list a:hover {
+  color: #2a768f; /* Azul muy claro */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de la navbar */
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ajusta el ancho según sea necesario (por ejemplo, 80%) */
+  max-width: 800px; /* Ancho máximo del slider */
+  margin: 0; /* Elimina el margen para alinear el slider a la izquierda */
+  margin-top: 190px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 60%; /* 10 imágenes, cada una ocupa el 10% */
+}
+
+.slides img {
+  width: 40%; /* Cada imagen ocupa el 10% del ancho total */
+  height: auto;
+}
+
+.main {
+  padding: 20px;
+  margin-left: 150px; /* Centra el cajón */
+  margin-top: 80px;
+}
+
+.descargas {
+  display: flex; /* Utiliza flexbox para alinear los elementos en fila */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.descargas button {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a columna para que el título esté debajo de la imagen */
+  align-items: center; /* Centra horizontalmente */
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  padding: 0; /* Elimina el padding para ajustar el tamaño de la imagen */
+  margin: 10px; /* Espaciado entre los botones */
+  background-color: transparent; /* Sin color de fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.descargas button img {
+  width: 200px; /* Ancho de la imagen */
+  height: 150px; /* Alto de la imagen */
+}
+
+.descargas button span {
+  margin-top: 5px; /* Espacio entre la imagen y el título */
+  text-align: center; /* Centra el texto */
+}
+
+.descargas button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

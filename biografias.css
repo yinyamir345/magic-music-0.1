@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Fuente sans-serif */
+  background-color: #333;
+}
+
+.cabezal {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Dividir en 3 partes: logo, navegador y slider */
+  height: 280px;
+  width: 1100px; /* Establecer ancho de 800px */
+  margin: 0 auto; /* Centrado */
+}
+.fondo {
+  background-image: url("img/musica3.jpg"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 250px; /* Ajusta la altura según sea necesario */
+  width: 70%; /* Ajusta el ancho según sea necesario */
+}
+.logo {
+  position: absolute;
+  width: 250px; /* Establecer ancho de 150px */
+  height: 250px; /* Establecer alto de 150px */
+  margin-left: 30px; /* Alineado a la izquierda */
+  margin-top: 20px;
+}
+.logotipo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.navegador {
+  width: 700px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 150px; /* Mover más cerca del logo */
+  margin-top: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(0, 40%, 66%, 0.486);
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.nav-list a:hover {
+  color: #2a768f; /* Azul muy claro */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de la navbar */
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.slider {
+  width: 100%;
+  max-width: 1000px; /* Ajusta el ancho máximo del slider */
+  overflow: hidden;
+  position: relative;
+  margin-top: 195px;
+}
+
+.slides {
+  display: flex; /* Utiliza flexbox para alinear las imágenes en línea */
+  transition: transform 0.5s ease; /* Transición suave */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 20%; /* Asegúrate de que las imágenes ocupen todo el ancho */
+}
+
+.buscador {
+  color: aliceblue;
+  height: 40px;
+  width: 800px;
+  margin-top: 80px;
+  margin-left: 90px;
+}
+
+input {
+  width: 400px;
+  height: 50px;
+}
+button {
+  height: 50px;
+  width: 100px;
+  background-color: rgb(6, 166, 187);
+  border-radius: 10px;
+}
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 800px;
+}
